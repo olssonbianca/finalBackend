@@ -24,10 +24,10 @@ public class OdontologoService implements IOdontologoService {
 
 
     @Override
-    public void crearOdontologo(OdontologoDto odontologoDto) {
+    public Odontologo crearOdontologo(OdontologoDto odontologoDto) {
         Odontologo odontologo = new Odontologo();
         odontologo = mapper.convertValue(odontologoDto, Odontologo.class);
-        odontologoRepository.save(odontologo);
+        return odontologoRepository.save(odontologo);
     }
 
     @Override
@@ -52,12 +52,13 @@ public class OdontologoService implements IOdontologoService {
     }*/
 
     @Override
-    public void modificarOdontologo(Long id, OdontologoDto odontologoDto) {
+    public Odontologo modificarOdontologo(Long id, OdontologoDto odontologoDto) {
         Optional<Odontologo> odontologo = buscarOdontologo(id);
         if (odontologo.isPresent()) {
             Odontologo odontologoModificado = mapper.convertValue(odontologoDto, Odontologo.class);
-            odontologoRepository.save(odontologoModificado);
+            return odontologoRepository.save(odontologoModificado);
         }
+        return null;
     }
 
     @Override

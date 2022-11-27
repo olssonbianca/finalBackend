@@ -8,9 +8,9 @@ import java.util.Optional;
 public interface IOdontologoService {
     /*Listar, agregar, buscar, eliminar, modificar*/
 
-    void crearOdontologo(OdontologoDto odontologoDto);
+    public Odontologo crearOdontologo(OdontologoDto odontologoDto);
     public Optional<Odontologo> buscarOdontologo(Long id);
-    void modificarOdontologo(Long id, OdontologoDto odontologoDto);
+    public Odontologo modificarOdontologo(Long id, OdontologoDto odontologoDto);
     void eliminarOdontologo (Long id);
 
     List<Odontologo> listarOdontologos();
