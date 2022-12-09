@@ -12,13 +12,11 @@ import java.util.Optional;
 
 @Service
 public class OdontologoService implements IOdontologoService {
-    private final OdontologoRepository odontologoRepository;
+    private OdontologoRepository odontologoRepository;
 
     @Autowired
     ObjectMapper mapper;
-    public OdontologoService(OdontologoRepository odontologoRepository) {
-        this.odontologoRepository = odontologoRepository;
-    }
+
 
     /*Listar, crear y eliminar*/
 
@@ -29,7 +27,6 @@ public class OdontologoService implements IOdontologoService {
         odontologo = mapper.convertValue(odontologoDto, Odontologo.class);
         return odontologoRepository.save(odontologo);
     }
-
     @Override
     public Optional<Odontologo> buscarOdontologo(Long id) {
          Optional<Odontologo> odontologo = odontologoRepository.findById(id);
@@ -39,8 +36,6 @@ public class OdontologoService implements IOdontologoService {
          }
          return null;
     };
-
-
 
     /*@Override
     public OdontologoDto buscarOdontologo(Long id) {
