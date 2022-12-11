@@ -1,15 +1,11 @@
-package com.example.demo.entity;
+package com.example.demo.entities.dto;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "pacientes")
-public class Paciente {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class OdontologoDto {
     private Long id;
     private String nombre;
     private String apellido;
+    private String matricula;
 
     public Long getId() {
         return id;
@@ -29,5 +25,13 @@ public class Paciente {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 }

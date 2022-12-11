@@ -1,7 +1,7 @@
-package com.example.demo.entity;
-
+package com.example.demo.entities;
 
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "odontologos")
@@ -9,14 +9,23 @@ public class Odontologo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
+    private String matricula;
+    @Column
     private String nombre;
+    @Column
     private String apellido;
-    private Integer matricula;
-
-    /*Getter y setter*/
 
     public Long getId() {
         return id;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getNombre() {
@@ -35,11 +44,14 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
-    public Integer getMatricula() {
-        return matricula;
-    }
 
-    public void setMatricula(Integer matricula) {
-        this.matricula = matricula;
+    @Override
+    public String toString() {
+        return "Odontologo{" +
+                "id=" + id +
+                ", matricula='" + matricula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                '}';
     }
 }
