@@ -26,13 +26,13 @@ public class TurnoService implements IService<Turno> {
     }
 
     @Autowired
-    @Qualifier("paciente_services")
+    //@Qualifier("paciente_services")
     public void setPacienteServices(IService<Paciente> pacienteServices) {
         this.pacienteServices = pacienteServices;
     }
 
     @Autowired
-    @Qualifier("odontologoServices")
+    //@Qualifier("odontologo_services")
     public void setOdontologoServices(IService<Odontologo> odontologoServices) {
         this.odontologoServices = odontologoServices;
     }

@@ -9,14 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("v1/paciente")
+@RequestMapping("/paciente")
 
 public class PacienteController {
 
     private IService<Paciente> services;
 
     @Autowired
-    @Qualifier("pacienteServices")
     public void pacienteServices(IService<Paciente> services) {
         this.services = services;
     }

@@ -29,7 +29,6 @@ class OdontologoControllerTest {
     private MockMvc mockMvc;
 
     @Autowired
-    @Qualifier("odontologo_services")
     private IService<Odontologo> services;
 
     @BeforeEach
