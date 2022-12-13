@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    title.textContent = "Bienvenide"
+    title.textContent = "Te damos la bienvenida!"
     accion.textContent = ""
     contenido.innerHTML = "Selecciona una opcion del menu para iniciar"
 })

@@ -32,7 +32,7 @@ public class Security {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests()
+        /*http.csrf().disable().authorizeRequests()
                 .antMatchers("/", "static/**").permitAll()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/viewAdmin.html").hasRole("ADMIN")
@@ -43,7 +43,7 @@ public class Security {
                 .antMatchers("/turns").hasRole("USER")
                 .anyRequest().authenticated().and()
                 .formLogin().and().logout().and().httpBasic();
-
+*/
         return http.build();
     }
 
