@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    title.textContent = "Te damos la bienvenida!"
+    titulo.textContent = "Te damos la bienvenida!"
     accion.textContent = ""
     contenido.innerHTML = "Selecciona una opcion del menu para iniciar"
 })
@@ -64,3 +64,4 @@ for (let item of menu) {
         if (item.accion.textContent == "crear") {habilitarBoton(item.titulo)}
     })
 }
+

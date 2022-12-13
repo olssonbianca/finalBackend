@@ -1,4 +1,4 @@
-const title = document.querySelector("#SeccionTitulo")
+const titulo = document.querySelector("#SeccionTitulo")
 const accion = document.querySelector("#SeccionAccion")
 const contenido = document.querySelector("#SeccionContenido")
 const btnMenuCrearOdontologo = document.querySelector("#btnMenuCrearOdontologo")
@@ -15,3 +15,4 @@ const menu = [
 {titulo:'Paciente',accion:btnMenuListarPacientes, contenido:verPacientes},
 {titulo:'Turno',accion:btnMenuListarTurnos, contenido:verTurnos}
 ]
+
